@@ -1,2 +1,7 @@
-# NearMe-project2
-Project 2 named "Near Me" for the Engineering of Mobile Systems course 2019/2020
+# Project 2: Near Me
+
+- Name: Near Me
+- Course: Engineering of Mobile Systems
+- Year: 2019/2020
+- Creator: Chiara Mistrorigo
+- Clone this repository with: `git clone https://github.com/chiaramistro/NearMe-project2.git`
