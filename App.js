@@ -1,15 +1,19 @@
 import * as React from 'react';
-import {createStackNavigator} from 'react-navigation-stack';
-import {createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
 import ArticleListScreen from './screens/ArticleListScreen';
 import InsertLocationScreen from './screens/InsertLocationScreen';
 import LocationListScreen from './screens/LocationListScreen';
-import NewAddressScreen from './screens/NewAddressScreen'
-import ReadingListScreen from './screens/ReadingListScreen'
-import HomeScreen from './screens/HomeScreen'
-import { Provider } from "unstated";
-import {createBottomTabNavigator} from 'react-navigation-tabs'
-import {getIcon} from './styles.js'
+import NewAddressScreen from './screens/NewAddressScreen';
+import ReadingListScreen from './screens/ReadingListScreen';
+import HomeScreen from './screens/HomeScreen';
+import { Provider } from 'unstated';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { getIcon } from './styles.js';
+
+/*
+Setting the navigation
+*/
 
 const routes = {
   Home: HomeScreen,
@@ -24,22 +28,22 @@ const AppNavigator = createStackNavigator(routes, options);
 
 const tabRoutes = {
   Home: AppNavigator,
-  ReadingList: ReadingListScreen
-}
+  ReadingList: ReadingListScreen,
+};
 
 AppNavigator.navigationOptions = {
-  tabBarIcon: ({focused, tint}) => getIcon("ios-home", focused, tint),
-  }
+  tabBarIcon: ({ focused, tint }) => getIcon('ios-home', focused, tint),
+};
 
-const TabNavigator = createBottomTabNavigator(tabRoutes)
+const TabNavigator = createBottomTabNavigator(tabRoutes);
 const AppContainer = createAppContainer(TabNavigator);
 
 export default class App extends React.Component {
   render() {
     return (
       <Provider>
-      <AppContainer />
-       </Provider>
+        <AppContainer />
+      </Provider>
     );
   }
 }

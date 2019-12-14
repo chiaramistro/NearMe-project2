@@ -4,6 +4,11 @@ import { styles, Button } from '../styles.js';
 import { Subscribe } from 'unstated';
 import ListContainer from '../ListContainer';
 
+/*
+Screen showing the options when inserting a new location: the user
+can use its current position or can insert a name of a location.
+*/
+
 const InsertLocationScreen = props => (
   <Subscribe to={[ListContainer]}>
     {list => (
@@ -13,11 +18,13 @@ const InsertLocationScreen = props => (
           Which location do you want to use?
         </Text>
 
-        <Button title="Current location" onPress={() => {
-          list.askPermission()
-          props.navigation.navigate('ArticleList')
-          }
-         } />
+        <Button
+          title="Current location"
+          onPress={() => {
+            list.askPermission();
+            props.navigation.navigate('ArticleList');
+          }}
+        />
         <Button
           title="New address"
           onPress={() => props.navigation.navigate('NewAddress')}
@@ -28,7 +35,7 @@ const InsertLocationScreen = props => (
 );
 
 InsertLocationScreen.navigationOptions = {
- title: 'Insert location'
-  }
+  title: 'Insert location',
+};
 
 export default InsertLocationScreen;
