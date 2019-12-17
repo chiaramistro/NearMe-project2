@@ -35,4 +35,10 @@ const NewAddressScreen = props => (
   </Subscribe>
 );
 
+NewAddressScreen.navigationOptions = {
+  headerStyle: {
+    backgroundColor: '#1e88e5'
+  }
+};
+
 export default NewAddressScreen;

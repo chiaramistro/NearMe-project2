@@ -20,6 +20,10 @@ const ArticleListScreen = props => (
 
 ArticleListScreen.navigationOptions = {
   title: 'Articles found',
+  headerTintColor: '#ffffff',
+  headerStyle: {
+    backgroundColor: '#1e88e5'
+  }
 };
 
 export default ArticleListScreen;

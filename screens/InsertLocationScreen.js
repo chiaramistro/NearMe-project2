@@ -36,6 +36,10 @@ const InsertLocationScreen = props => (
 
 InsertLocationScreen.navigationOptions = {
   title: 'Insert location',
+  headerTintColor: '#ffffff',
+  headerStyle: {
+    backgroundColor: '#1e88e5'
+  }
 };
 
 export default InsertLocationScreen;

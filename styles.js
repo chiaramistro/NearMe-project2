@@ -55,16 +55,18 @@ export const styles = StyleSheet.create({
   button: {
     margin: 8,
     fontSize: 18,
-    borderColor: 'black',
-    borderWidth: 1,
+    color: 'white',
+    fontWeight: 'bold',
+    backgroundColor: '#1e88e5',
     textAlign: 'center',
   },
   smallButton: {
     fontSize: 15,
     textAlign: 'center',
     width: 50,
-    borderColor: 'blue',
-    borderWidth: 1,
+    color: 'white',
+    fontWeight: 'bold',
+    backgroundColor: '#6ab7ff',
     alignSelf: 'flex-end',
   },
   distance: {

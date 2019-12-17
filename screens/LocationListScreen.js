@@ -28,6 +28,10 @@ const LocationListScreen = props => (
 
 LocationListScreen.navigationOptions = {
   title: 'Locations',
+  headerTintColor: '#ffffff',
+  headerStyle: {
+    backgroundColor: '#1e88e5'
+  }
 };
 
 export default LocationListScreen;

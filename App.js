@@ -23,7 +23,10 @@ const routes = {
   NewAddress: NewAddressScreen,
 };
 
-const options = { initialRouteName: 'Home' };
+const options = {
+  initialRouteName: 'Home'
+ };
+
 const AppNavigator = createStackNavigator(routes, options);
 
 const tabRoutes = {
@@ -35,7 +38,16 @@ AppNavigator.navigationOptions = {
   tabBarIcon: ({ focused, tint }) => getIcon('ios-home', focused, tint),
 };
 
-const TabNavigator = createBottomTabNavigator(tabRoutes);
+const TabNavigator = createBottomTabNavigator(tabRoutes, {
+    tabBarOptions: {
+        activeTintColor: '#ffffff',
+        inactiveTintColor: '#000000',
+        style: {
+            backgroundColor: '#1e88e5'
+        }
+    }
+});
+
 const AppContainer = createAppContainer(TabNavigator);
 
 export default class App extends React.Component {

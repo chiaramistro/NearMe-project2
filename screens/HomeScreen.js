@@ -39,6 +39,10 @@ const HomeScreen = props => (
 
 HomeScreen.navigationOptions = {
   title: 'Home',
+  headerTintColor: '#ffffff',
+  headerStyle: {
+    backgroundColor: '#1e88e5'
+  }
 };
 
 export default HomeScreen;
